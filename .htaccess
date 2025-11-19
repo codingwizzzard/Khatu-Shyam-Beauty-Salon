@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Redirect /service to service.html
+RewriteRule ^service$ service.html [L]
+
+# Redirect /blog to blog.html
+RewriteRule ^blog$ blog.html [L]
+
+RewriteRule ^about$ about.html [L]
+RewriteRule ^contact$ contact.html [L]
+RewriteRule ^elements$ elements.html [L]
+RewriteRule ^single-blog$ single-blog.html [L]
