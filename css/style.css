@@ -6442,6 +6442,7 @@ h6 {
 .sidebar-backdrop.active {
   display: block;
 }
+
 /* 
 .service-box {
   border: 1px solid #ececec;
@@ -6478,3 +6479,52 @@ h6 {
   font-weight: 700;
   color: #000;
 } */
+.fixedButton {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1000;
+  /* 1. Added more padding to the top and bottom of the container */
+  padding: 20px 20px; /* Top/Bottom padding | Left/Right padding */
+  text-decoration: none;
+  display: inline-block;
+  z-index: 9;
+}
+
+.roundedFixedBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* 2. Set a specific height and line-height for vertical alignment control */
+  height: 45px; 
+  line-height: 50px; 
+  
+  width: 120px;
+  font-size: 24px; 
+  font-weight: 700;
+  border-radius: 50px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.roundedFixedBtn a {
+  text-decoration: none;
+  color: #fff;
+  flex-grow: 1; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; /* Important: takes full height of the parent */
+  border-right: 1px solid #333; 
+}
+
+.roundedFixedBtn i {
+  padding: 0;
+}
+
+.roundedFixedBtn a:last-child {
+  border: 0;
+}
