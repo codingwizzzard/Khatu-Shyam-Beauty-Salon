@@ -1535,7 +1535,7 @@ h3 {
 
 /* line 25, ../../Arafath/CL/january 2020/238. Barber/HTML/scss/_prising.scss */
 .prising_area .single_service {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 /* line 29, ../../Arafath/CL/january 2020/238. Barber/HTML/scss/_prising.scss */
@@ -6406,10 +6406,10 @@ h6 {
 
 /* hamburger icon */
 .sidebar-open-btn {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 20px;
-  z-index: 100000;
+  z-index: 999999;
   color: #fff;
   font-size: 28px;
   cursor: pointer;
@@ -6442,6 +6442,36 @@ h6 {
 .sidebar-backdrop.active {
   display: block;
 }
+
+.logo-text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  display: block;
+  text-align: left;
+  width: 200px;
+}
+
+/* Mobile View Fix */
+@media (max-width: 767px) {
+  .logo-img a {
+    align-items: center !important;
+  }
+
+  .logo-text {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    margin-top: 2px;
+    width: 100px;
+  }
+
+  .logo-img img {
+    height: 40px !important;
+  }
+}
+
 
 /* 
 .service-box {
@@ -6485,7 +6515,8 @@ h6 {
   right: 0px;
   z-index: 1000;
   /* 1. Added more padding to the top and bottom of the container */
-  padding: 20px 20px; /* Top/Bottom padding | Left/Right padding */
+  padding: 20px 20px;
+  /* Top/Bottom padding | Left/Right padding */
   text-decoration: none;
   display: inline-block;
   z-index: 9;
@@ -6495,13 +6526,13 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   /* 2. Set a specific height and line-height for vertical alignment control */
-  height: 45px; 
-  line-height: 50px; 
-  
+  height: 45px;
+  line-height: 50px;
+
   width: 120px;
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: 700;
   border-radius: 50px;
   background-color: #000;
@@ -6513,12 +6544,13 @@ h6 {
 .roundedFixedBtn a {
   text-decoration: none;
   color: #fff;
-  flex-grow: 1; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  height: 100%; /* Important: takes full height of the parent */
-  border-right: 1px solid #333; 
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* Important: takes full height of the parent */
+  border-right: 1px solid #333;
 }
 
 .roundedFixedBtn i {

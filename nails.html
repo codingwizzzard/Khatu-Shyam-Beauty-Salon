@@ -8,13 +8,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
-    <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -25,7 +23,6 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
 <body>
@@ -35,47 +32,67 @@
             <div id="sticky-header" class="main-header-area">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-xl-3 col-lg-3">
-                            <div class="logo-img d-flex align-items-center" style="height: 50px;">
-                                <a href="/" class="d-flex align-items-center">
-                                    <img src="img/logo1.png" style="height: 50px; width:auto; margin-right:10px;">
-                                    <span style="color:#fff; font-size:16px; font-weight:600;">
-                                        KS BEAUTY LOUNGE PRIVATE LIMITED
-                                    </span>
-                                </a>
-                            </div>
 
-                        </div>
-                        <div class="col-xl-9 col-lg-9">
-                            <div class="menu_wrap d-none d-lg-block">
-                                <div class="menu_wrap_inner d-flex align-items-center justify-content-end">
-                                    <div class="main-menu">
-                                        <nav>
-                                            <ul id="navigation">
-                                                <li><a class="active" href="/">home</a></li>
-                                                <li><a href="hair.html">Hair</a></li>
-                                                <li><a href="skin.html">Skin</a></li>
-                                                <li><a href="nails.html">Nails</a></li>
-                                                <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu"> -->
-                                                <li><a href="about.html">about</a></li>
-                                                <!-- <li><a href="elements.html">elements</a></li> -->
-                                                <!-- </ul>
-                                                </li> -->
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
+                        <!-- LEFT MENU (HAIR, SKIN, NAIL, MANI-PEDI) -->
+                        <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                            <div class="menu_wrap_inner d-flex align-items-center justify-content-start">
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul id="navigation" class="d-flex gap-4">
+                                            <li><a href="hair.html">Hair</a></li>
+                                            <li><a href="skin.html">Skin</a></li>
+                                            <li><a href="nails.html">Nails</a></li>
+                                            <li><a href="mani-pedi.html">Mani-Pedi</a></li>
+                                        </ul>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div> -->
+
+                        <!-- CENTER LOGO -->
+                        <div class="col-xl-4 col-lg-4 col-6">
+                            <div class="logo-img d-flex align-items-center justify-content-center text-center text-lg-left"
+                                style="height: 50px;">
+                                <a href="/" class="d-flex align-items-center">
+                                    <img src="img/logo1.png" style="height: 50px; width:auto; margin-right:10px;">
+
+                                    <!-- Text in 2 lines -->
+                                    <span class="logo-text">
+                                        KS BEAUTY LOUNGE
+                                        PRIVATE LIMITED
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- RIGHT MENU (HOME, ABOUT, CONTACT) -->
+                        <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                            <div class="menu_wrap d-flex align-items-center justify-content-end">
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul id="navigation" class="d-flex gap-4">
+                                            <li><a class="active" href="/">Home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MOBILE MENU BUTTON -->
+                        <div class="col-6 d-block d-lg-none text-right">
+                            <div class="sidebar-open-btn ">
+                                <i class="fa fa-bars"></i>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Mobile/Tablet Sidebar -->
         <div id="mobileSidebar" class="mobile-sidebar">
             <div class="sidebar-header">
@@ -87,21 +104,18 @@
                 <li><a href="hair.html">Hair</a></li>
                 <li><a href="skin.html">Skin</a></li>
                 <li><a href="nails.html">Nails</a></li>
+                <li><a href="mani-pedi.html">Mani-Pedi</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
-        <!-- Mobile/Tablet Menu Button -->
-        <div class="sidebar-open-btn d-block d-lg-none">
-            <i class="fa fa-bars"></i>
-        </div>
 
+        <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
     </header>
     <!-- header-end -->
 
-     <!-- bradcam_area_start -->
-     <div class="bradcam_area breadcam_bg overlay">
+    <!-- Banner -->
+    <div class="bradcam_area breadcam_bg overlay">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -110,127 +124,140 @@
             </div>
         </div>
     </div>
-    <!-- bradcam_area_end -->
 
-    <div class="service_area">
-        <div class="container">
-            <div class="row justify-content-center ">
-                <div class="col-lg-6 col-md-10">
-                    <div class="section_title text-center mb-55">
-                        <h3>Our Services</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service">
-                         <div class="service_thumb">
-                             <img src="img/service/1.png" alt="">
-                         </div>
-                         <div class="service_content text-center">
-                            <div class="icon">
-                                <i class="flaticon-shave"></i>
-                            </div>
-                            <h3>Smooth Shave</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service">
-                         <div class="service_thumb">
-                             <img src="img/service/2.png" alt="">
-                         </div>
-                         <div class="service_content text-center">
-                            <div class="icon">
-                                <i class="flaticon-barber"></i>
-                            </div>
-                            <h3>Beard Triming</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service">
-                         <div class="service_thumb">
-                             <img src="img/service/3.png" alt="">
-                         </div>
-                         <div class="service_content text-center">
-                            <div class="icon">
-                                <i class="flaticon-null"></i>
-                            </div>
-                            <h3>Haircut Styles</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                         </div>
-                    </div>
-                </div>
+    <!-- WHY CHOOSE US -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <h3 class="text-center mb-3">Why Choose Us for Your Next Haircut?</h3>
+                <p style="color: #555; font-size: 16px; line-height: 1.7;">
+                    At KS Beauty Lounge, a haircut is not just a service—it is an experience designed to complement your
+                    personality.
+                    Our expert stylists understand face shapes, hair texture, and style preferences to give you a
+                    professional look
+                    that enhances your natural features. Whether you prefer modern trends or classic cuts, we deliver
+                    with precision.
+                </p>
+
+                <p style="color: #555; font-size: 16px; line-height: 1.7;">
+                    Our salon uses salon-grade tools, premium hair products, and follows strict hygiene measures. With a
+                    calm and
+                    relaxing environment, personalized consultations, and skilled stylists, we ensure you walk out
+                    looking confident,
+                    refreshed, and stylish.
+                </p>
+
+                <h3 class="text-center mb-3 mt-5">What We Offer</h3>
+                <p style="color: #555; font-size: 16px; line-height: 1.7;">
+                    From precision haircuts to professional hairstyling, we offer services for all hair lengths and
+                    styles. Whether you
+                    want a quick trim, a complete transformation, beard shaping, blow-dry styling, curling, or temporary
+                    straightening,
+                    our experts provide results that elevate your look.
+                </p>
+
+                <p style="color: #555; font-size: 16px; line-height: 1.7;">
+                    We believe in blending creativity with experience, ensuring each service leaves you feeling your
+                    best. Your style,
+                    comfort, and satisfaction are always our top priorities.
+                </p>
+
             </div>
         </div>
     </div>
 
-
-    <div class="make_apppointment_area">
+    <!-- SERVICE BOXES (Florian Style) -->
+    <div class="prising_area">
         <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="section_title mb-55">
+                        <h3>Nail Essentials</h3>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section_title pl-68">
-                        <h3>Make an Appointment</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="appoint_ment_form pl-68">
-                        <form action="#">
-                            <div class="single_field">
-                                <input type="text" placeholder="Name">
+                    <div class="prising_slider_active owl-carousel">
+                        <div class="prising_active d-flex justify-content-between">
+                            <div class="single_prising">
+                                <div class="prise_title">
+                                    <h4>Nails</h4>
+                                </div>
+                                <div class="single_service">
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Gel Polish Removal</span>
+                                            <span>₹199</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Extension Removal</span>
+                                            <span>₹399</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Plain Gel Polish</span>
+                                            <span>₹399</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>French Gel Polish</span>
+                                            <span>₹599</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Ombre Nails</span>
+                                            <span>₹799</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Acrylic Extensions</span>
+                                            <span>₹1039</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Stick-on Nails</span>
+                                            <span>₹499</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                             </div>
-                            <div class="single_field">
-                                <input type="text" placeholder="Email">
+                            <div class="single_prising">
+                                <div class="prise_title" style="visibility: hidden;">
+                                    <h4>scsas</h4>
+                                </div>
+                                <div class="single_service">
+                                    <div class="hair_style_info">
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Gel Polish Removal</span>
+                                            <span>₹199</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Extension Removal</span>
+                                            <span>₹399</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Plain Gel Polish</span>
+                                            <span>₹399</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>French Gel Polish</span>
+                                            <span>₹599</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Ombre Nails</span>
+                                            <span>₹799</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Acrylic Extensions</span>
+                                            <span>₹1039</span>
+                                        </div>
+                                        <div class="prise d-flex justify-content-between">
+                                            <span>Stick-on Nails</span>
+                                            <span>₹499</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                             </div>
-                            <div class="single_field m-0">
-                                <textarea id="" cols="30" rows="10" placeholder="Message"></textarea>
-                            </div>
-                            <p>I’m available for commissions and collaborations, and i’m <br>
-                                excited to hear from you about new projects.</p>
-                            <div class="form_btn">
-                                <button class="boxed-btn3" type="submit">Send message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4 offset-lg-1">
-                    <div class="appointMent_info">
-                        <div class="single_appontment">
-                            <h4>Visit our salon at</h4>
-                            <p>
-                                <a href="https://maps.google.com/?q=KS+Beauty+Lounge,+Borivali+West,+Mumbai"
-                                    target="_blank" style="color: #7f7f7f;">
-                                    Shop No. 1, 2, Kapoor Apartment, CHS, 103 & 104, Chandavarkar Rd, near Om Shanti
-                                    Chowk,
-                                    Maharashtra Nagar, Borivali West, Mumbai, Maharashtra 400092
-                                </a>
-                            </p>
-                        </div>
-
-                        <div class="single_appontment">
-                            <h4>Message us</h4>
-                            <p>
-                                <a href="mailto:Ks.beautylounge2024@gmail.com" style="color: #7f7f7f;">Ks.beautylounge2024@gmail.com</a> <br>
-                                <a href="tel:+919152519145" style="color: #7f7f7f;">(+91) 91525 19145</a>
-                            </p>
-                        </div>
-                        <div class="single_appontment">
-                            <h4>Working Hours</h4>
-                            <p class="d-flex justify-content-between">
-                                <span>Monday - Sunday</span>
-                                <span>: 10.00AM - 10.00PM</span>
-                            </p>
-                            <!-- <p class="d-flex justify-content-between">
-                                <span>Sunday</span>
-                                <span>:  09.00 - 16.00s</span>
-                            </p> -->
                         </div>
                     </div>
                 </div>
@@ -238,25 +265,19 @@
         </div>
     </div>
 
-
-    <!-- footer_start  -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer_top py-5">
             <div class="container">
                 <div class="row align-items-start">
 
-                    <!-- Column 1: Logo + Company Name -->
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
                         <div class="footer_widget">
                             <img src="img/logo1.png" alt="" class="footer-logo mb-3">
-
-                            <p class="footer_brand_text">
-                                KS Beauty Lounge Private Limited
-                            </p>
+                            <p class="footer_brand_text">KS Beauty Lounge Private Limited</p>
                         </div>
                     </div>
 
-                    <!-- Column 2: Useful Links -->
                     <div class="col-xl-2 col-lg-2 col-md-6 mb-4">
                         <div class="footer_widget">
                             <h3 class="footer_title">Useful Links</h3>
@@ -268,7 +289,6 @@
                         </div>
                     </div>
 
-                    <!-- Column 3: Services -->
                     <div class="col-xl-2 col-lg-2 col-md-6 mb-4">
                         <div class="footer_widget">
                             <h3 class="footer_title">Our Services</h3>
@@ -280,17 +300,12 @@
                         </div>
                     </div>
 
-                    <!-- Column 4: Contact Info -->
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
                         <div class="footer_widget">
                             <h3 class="footer_title">Contact</h3>
                             <p class="footer_contact_text">
                                 <a href="https://maps.google.com/?q=KS+Beauty+Lounge,+Borivali+West,+Mumbai"
-                                    target="_blank" style="color: #7f7f7f;">
-                                    Shop No. 1, 2, Kapoor Apartment, CHS, 103 & 104, Chandavarkar Rd, near Om Shanti
-                                    Chowk,
-                                    Maharashtra Nagar, Borivali West, Mumbai, Maharashtra 400092
-                                </a>
+                                    target="_blank" style="color: #7f7f7f;">Shop No. 1, 2, Kapoor Apartment...</a>
                             </p>
 
                             <p class="footer_contact_text">
@@ -299,9 +314,9 @@
                                 <strong>Email: </strong> <a href="mailto:ks.beautylounge2024@gmail.com"
                                     style="color: #7f7f7f;">ks.beautylounge2024@gmail.com</a>
                             </p>
-                            <!-- Social Icons -->
+
                             <div class="footer_social">
-                                <a href="https://youtube.com/@khatushyamsalon?si=9RS0m253mQZ-ANwn" target="_blank"><i
+                                <a href="https://youtube.com/@khatushyamsalon" target="_blank"><i
                                         class="fa-brands fa-youtube"></i></a>
                                 <a href="https://www.instagram.com/khatushyamsalon/" target="_blank"><i
                                         class="fa-brands fa-instagram"></i></a>
@@ -309,14 +324,15 @@
                                 <a href="https://pin.it/3H6V8kthA" target="_blank"><i
                                         class="fa-brands fa-pinterest-p"></i></a>
                             </div>
+
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </footer>
-    <!-- footer_end  -->
-     <div class="fixedButton">
+    <div class="fixedButton">
          <div class="roundedFixedBtn"><a href="tel:+919152519145" aria-label="Call Florian Hurel Hair Couture &amp; Spa"><i class="fa fa-phone"></i></a><a href="https://api.whatsapp.com/send?phone=919152519145" target="_blank" aria-label="Chat with Florian Hurel Hair Couture &amp; Spa on WhatsApp"><i class="fa fa-whatsapp"></i></a></div>
       </div>
 
@@ -340,7 +356,6 @@
     <script src="js/plugins.js"></script>
     <script src="js/gijgo.min.js"></script>
 
-    <!--contact js-->
     <script src="js/contact.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.form.js"></script>
@@ -348,25 +363,7 @@
     <script src="js/mail-script.js"></script>
 
     <script src="js/main.js"></script>
-    <script>
-        $('#datepicker').datepicker({
-            iconsLibrary: 'fontawesome',
-            disableDaysOfWeek: [0, 0],
-        //     icons: {
-        //      rightIcon: '<span class="fa fa-caret-down"></span>'
-        //  }
-        });
-        $('#datepicker2').datepicker({
-            iconsLibrary: 'fontawesome',
-            icons: {
-             rightIcon: '<span class="fa fa-caret-down"></span>'
-         }
 
-        });
-        var timepicker = $('#timepicker').timepicker({
-         format: 'HH.MM'
-     });
-    </script>
 </body>
 
 </html>

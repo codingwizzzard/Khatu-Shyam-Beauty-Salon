@@ -5,9 +5,11 @@
     var scroll = $(window).scrollTop();
     if (scroll < 400) {
       $("#sticky-header").removeClass("sticky");
+      $(".sidebar-open-btn").removeClass("sticky");
       $('#back-top').fadeIn(500);
     } else {
       $("#sticky-header").addClass("sticky");
+      $(".sidebar-open-btn").addClass("sticky");
       $('#back-top').fadeIn(500);
     }
   });
