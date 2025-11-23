@@ -6560,3 +6560,16 @@ h6 {
 .roundedFixedBtn a:last-child {
   border: 0;
 }
+
+.footer_bottom {
+  background-color: #000;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.footer_bottom p {
+  margin: 0;
+  color: #dcdcdc;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
