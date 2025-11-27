@@ -247,22 +247,103 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="appoint_ment_form pl-68">
-                        <form action="#">
-                            <div class="single_field">
-                                <input type="text" placeholder="Name">
+                        <form class="form-contact contact_form" action="" method="post" id="contactForm"
+                            novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control w-100" name="message" id="message" cols="30"
+                                            rows="9" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="name" id="name" type="text"
+                                            placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="email" id="email" type="email"
+                                            placeholder="Enter email address">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input class="form-control" name="location" id="location" type="text"
+                                            placeholder="Enter Location">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <select class="form-control" name="service" id="service">
+                                            <option value="">Select Service</option>
+                                            <option value="Hair">Hair</option>
+                                            <option value="Skin">Skin</option>
+                                            <option value="Nails">Nails</option>
+                                            <option value="Mani-Pedi">Mani-Pedi</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group ">
+                                        <input class="form-control" name="phone" id="phone" type="text"
+                                            placeholder="Phone Number">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="single_field">
-                                <input type="text" placeholder="Email">
-                            </div>
-                            <div class="single_field m-0">
-                                <textarea id="" cols="30" rows="10" placeholder="Message"></textarea>
-                            </div>
-                            <p>I’m available for commissions and collaborations, and i’m <br>
-                                excited to hear from you about new projects.</p>
-                            <div class="form_btn">
-                                <button class="boxed-btn3" type="submit">Send message</button>
+
+                            <div class="form-group mt-3">
+                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
                             </div>
                         </form>
+
+
+                        <script>
+                            const scriptURL = "https://api.sheetbest.com/sheets/96714d2b-c6a0-4b56-8692-f8404dfc35dc";
+
+                            function showToast(message, type = "success") {
+                                const toast = document.getElementById("toast");
+                                toast.textContent = message;
+                                toast.className = "toast show " + type;
+
+                                setTimeout(() => {
+                                    toast.className = "toast";
+                                }, 3000);
+                            }
+
+                            document.getElementById("contactForm").addEventListener("submit", function (e) {
+                                e.preventDefault();
+
+                                const fd = new FormData(this);
+                                const data = Object.fromEntries(fd.entries());
+
+                                if (!data.name || !data.email || !data.phone || !data.message || !data.location || !data.service) {
+                                    showToast("Please fill all fields!", "error");
+                                    return;
+                                }
+
+                                data.timestamp = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+
+                                fetch(scriptURL, {
+                                    method: "POST",
+                                    body: JSON.stringify(data),
+                                    headers: { 'Content-Type': 'application/json' }
+                                })
+                                    .then(r => r.json())
+                                    .then(res => {
+                                        showToast("Submitted Successfully!", "success");
+                                        this.reset();
+                                    })
+                                    .catch(err => {
+                                        console.error(err);
+                                        showToast("Submission failed!", "error");
+                                    });
+                            });
+                        </script>
                     </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1">
@@ -291,7 +372,7 @@
                             <h4>Creative Hours</h4>
                             <p class="d-flex justify-content-between">
                                 <span>Monday to Sunday</span>
-                                <span>: 10.00AM - 10.00P    M</span>
+                                <span>: 10.00AM - 10.00P M</span>
                             </p>
                             <!-- <p class="d-flex justify-content-between">
                                 <span>Sunday</span>
@@ -346,7 +427,9 @@
                             <h3 class="footer_title">Connect with Us</h3>
                             <p class="footer_contact_text">
                                 <a href="https://maps.google.com/?q=KS+Beauty+Lounge,+Borivali+West,+Mumbai"
-                                    target="_blank" style="color: #7f7f7f;">Shop No. 1, 2, Kapoor Apartment, CHS, 103 & 104, Chandavarkar Rd, near Om Shanti Chowk, Maharashtra Nagar, Borivali West, Mumbai, Maharashtra 400092</a>
+                                    target="_blank" style="color: #7f7f7f;">Shop No. 1, 2, Kapoor Apartment, CHS, 103 &
+                                    104, Chandavarkar Rd, near Om Shanti Chowk, Maharashtra Nagar, Borivali West,
+                                    Mumbai, Maharashtra 400092</a>
                             </p>
 
                             <p class="footer_contact_text">
@@ -382,11 +465,15 @@
         </div>
     </footer>
     <!-- footer_end  -->
-     <div class="fixedButton">
-         <div class="roundedFixedBtn"><a href="tel:+919152519145" aria-label="Call Florian Hurel Hair Couture &amp; Spa"><i class="fa fa-phone"></i></a><a href="https://api.whatsapp.com/send?phone=919152519145" target="_blank" aria-label="Chat with Florian Hurel Hair Couture &amp; Spa on WhatsApp"><i class="fa fa-whatsapp"></i></a></div>
-      </div>
+    <div class="fixedButton">
+        <div class="roundedFixedBtn"><a href="tel:+919152519145"
+                aria-label="Call Florian Hurel Hair Couture &amp; Spa"><i class="fa fa-phone"></i></a><a
+                href="https://api.whatsapp.com/send?phone=919152519145" target="_blank"
+                aria-label="Chat with Florian Hurel Hair Couture &amp; Spa on WhatsApp"><i
+                    class="fa fa-whatsapp"></i></a></div>
+    </div>
 
-      <div class="footer_bottom py-3" style="background: #000; text-align: center;">
+    <div class="footer_bottom py-3" style="background: #000; text-align: center;">
         <p class="mt-0" style="color:#b3b3b3; font-size:14px;">
             © <span id="currentYear"></span> KS Beauty Lounge Private Limited. All Rights Reserved.
         </p>
@@ -444,6 +531,7 @@
             format: 'HH.MM'
         });
     </script>
+    <div id="toast" class="toast"></div>
 </body>
 
 </html>
